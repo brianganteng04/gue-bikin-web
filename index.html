@@ -1,0 +1,29 @@
+<style>
+  body {
+    font-family: Arial;
+    max-width: 400px;
+    margin: 30px auto;
+    background-color: rgb(226, 226, 7);
+  }
+  button {
+    background-color: rgb(237, 178, 70);
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+  }
+</style>
+
+<h1>mari berhitung</h1>
+<input id="tugas" placeholder="coba hitung 2+3=...">
+<button onclick="tambah()">Tambah</button>
+<ul id="daftar"></ul>
+
+<script>
+  function tambah() {
+    var kotak = document.getElementById("tugas");
+    var item = document.createElement("li");
+    item.innerText = kotak.value;
+    document.getElementById("daftar").appendChild(item);
+    kotak.value = "";
+  }
+</script>
